@@ -115,3 +115,27 @@ footer {
     font-size: 1rem;
   }
 }
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+#projects a {
+  color: #0077cc;
+  font-weight: bold;
+}
+
+#projects a:hover {
+  text-decoration: underline;
+  color: #005fa3;
+}
+#skills h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #222;
+}
