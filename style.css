@@ -1,65 +1,35 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  padding: 40px;
-}
-
-h1 {
-  color: #2c3e50;
-}
-
-p {
-  font-size: 18px;
-}
-@media (max-width: 600px) {
-  .container {
-    margin: 20px;
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
 }
 
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header and Navbar */
 header {
   background: #222;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
 }
 
-section {
-  padding: 20px;
-}
-
-h2 {
-  color: #333;
-}
-
-footer {
-  background: #f4f4f4;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-}
 nav {
   margin-top: 10px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
 }
@@ -67,3 +37,50 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+/* Container for sections */
+section {
+  max-width: 800px;
+  margin: 50px auto; /* centers and spaces sections vertically */
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Section headings */
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  margin-top: auto; /* sticks footer to bottom if page is short */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  section {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
