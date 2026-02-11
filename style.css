@@ -140,3 +140,27 @@ footer {
     font-size: 1rem;
   }
 }
+#hero {
+  text-align: center;
+  padding: 80px 20px; /* more padding */
+  background: linear-gradient(to right, #0077cc, #00bfff);
+  color: white;
+}
+
+#hero .hero-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid white; /* optional for better visibility */
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+}
