@@ -192,3 +192,8 @@ footer {
   animation: fadeSlide 1.2s forwards;
   animation-delay: 0.6s;
 }
+/* Remove extra space under the sticky header */
+#hero {
+  margin-top: -60px; /* adjust if your header height changes */
+  padding-top: 60px; /* preserves the visual spacing */
+}
