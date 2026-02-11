@@ -1,36 +1,44 @@
-/* Reset some default styles */
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  color: #333;
 }
 
-/* Header and Navbar */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header & Navbar */
 header {
   background: #222;
   color: white;
   padding: 20px 0;
   text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav {
-  margin-top: 10px;
+header h1 {
+  margin-bottom: 10px;
 }
 
 nav a {
   color: white;
   margin: 0 15px;
-  text-decoration: none;
   font-weight: bold;
 }
 
@@ -38,64 +46,63 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Container for sections */
+/* Sections */
 section {
-  max-width: 800px;
-  margin: 50px auto; /* centers and spaces sections vertically */
+  max-width: 900px;
+  margin: 40px auto;
   padding: 20px;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Section headings */
-h2 {
-  color: #333;
+section h2 {
   margin-bottom: 15px;
+  color: #222;
 }
 
-/* Footer styling */
+section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section ul li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background: #222;
   color: white;
-  margin-top: auto; /* sticks footer to bottom if page is short */
+  margin-top: 40px;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
-  section {
-    margin: 20px;
-    padding: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
+@media (max-width: 768px) {
   nav a {
     display: block;
     margin: 5px 0;
   }
-}
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-body {
-  font-size: 1rem;
-}
-section {
-  padding: 2rem;
+
+  section {
+    margin: 20px 15px;
+    padding: 15px;
+  }
 }
 
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.2rem;
+  }
+}
