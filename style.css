@@ -164,3 +164,31 @@ footer {
 #hero p {
   font-size: 1.2rem;
 }
+/* Hero Animation */
+.hero-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlide 1.2s forwards;
+  animation-delay: 0.3s; /* delay to make it smoother */
+}
+
+.hero-fade img {
+  animation: fadeSlide 1.5s forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-fade h1 {
+  animation: fadeSlide 1.2s forwards;
+  animation-delay: 0.4s;
+}
+
+.hero-fade p {
+  animation: fadeSlide 1.2s forwards;
+  animation-delay: 0.6s;
+}
