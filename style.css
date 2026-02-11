@@ -1,15 +1,20 @@
-/* Global Styles */
+/* Global Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Fonts */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -21,25 +26,42 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header & Navbar */
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0077cc, #00bfff);
+  color: white;
+}
+
+#hero .hero-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Header / Navbar */
 header {
   background: #222;
   color: white;
-  padding: 20px 0;
-  text-align: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-header h1 {
-  margin-bottom: 10px;
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
   margin: 0 15px;
   font-weight: bold;
+  color: white;
 }
 
 nav a:hover {
@@ -51,23 +73,20 @@ section {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 section h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #222;
 }
 
-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-section ul li {
-  margin-bottom: 10px;
+/* Card Styling */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -79,30 +98,20 @@ footer {
   margin-top: 40px;
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   nav a {
     display: block;
     margin: 5px 0;
   }
-
-  section {
-    margin: 20px 15px;
-    padding: 15px;
-  }
 }
 
 @media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
+  #hero h1 {
+    font-size: 1.8rem;
   }
 
-  section h2 {
-    font-size: 1.2rem;
+  #hero p {
+    font-size: 1rem;
   }
 }
