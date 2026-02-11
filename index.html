@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hastings Maluwa | Portfolio</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -32,14 +39,14 @@
   </header>
 
   <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
+  <section id="about" class="fade-in">
+    <h2><i class="fas fa-user"></i> About Me</h2>
     <p>I am Hastings Maluwa from Blantyre, Malawi. I am passionate about finance, data analytics, web development, and community development. I create practical solutions that make a difference and enjoy learning new skills.</p>
   </section>
 
   <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
+  <section id="education" class="fade-in">
+    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
     <div class="card">
       <h3>Bachelor of Commerce in Tourism Management</h3>
       <p>University of Malawi</p>
@@ -54,12 +61,12 @@
     </div>
   </section>
 
-  <!-- Professional Experience -->
-  <section id="experience">
-    <h2>Professional Experience</h2>
+  <!-- Experience -->
+  <section id="experience" class="fade-in">
+    <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
     <div class="card">
       <h3>Senior Finance Officer - Compliance — SWIFT Limited</h3>
-      <p>Currently handling compliance, grants management, and financial reporting at SWIFT Limited.</p>
+      <p>Currently handling compliance, grants management, and financial reporting.</p>
     </div>
     <div class="card">
       <h3>Junior Accountant — SWIFT Limited</h3>
@@ -76,17 +83,17 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
+  <section id="skills" class="fade-in">
+    <h2><i class="fas fa-lightbulb"></i> Skills</h2>
     <div class="card">
-      <h3>Technical Skills</h3>
+      <h3><i class="fas fa-code"></i> Technical Skills</h3>
       <ul>
         <li>HTML, CSS, JavaScript</li>
         <li>Excel, SPSS, STATA, QuickBooks</li>
         <li>Data Collection, Analysis, Reporting</li>
       </ul>
 
-      <h3>Professional Skills</h3>
+      <h3><i class="fas fa-users"></i> Professional Skills</h3>
       <ul>
         <li>Leadership & Team Management</li>
         <li>Project Management</li>
@@ -96,11 +103,12 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects">
-    <h2>Projects & Achievements</h2>
+  <section id="projects" class="fade-in">
+    <h2><i class="fas fa-project-diagram"></i> Projects & Achievements</h2>
     <div class="card">
       <h3><a href="https://github.com/Hasty-Prog/My-First-Website" target="_blank">My First Website</a></h3>
       <p>Personal website built with HTML & CSS to showcase web development skills.</p>
+      <a href="https://github.com/Hasty-Prog/My-First-Website" class="btn" target="_blank">View Project</a>
     </div>
     <div class="card">
       <h3>BTG Foundation</h3>
@@ -113,11 +121,11 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: hastingsnelson1@gmail.com</p>
-    <p>Phone: +265 88 0 216 741</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/hastings-maluwa-932548342/">Hastings Maluwa</a></p>
+  <section id="contact" class="fade-in">
+    <h2><i class="fas fa-envelope"></i> Contact</h2>
+    <p><i class="fas fa-envelope"></i> Email: hastingsnelson1@gmail.com</p>
+    <p><i class="fas fa-phone"></i> Phone: +265 88 0 216 741</p>
+    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/hastings-maluwa-932548342/">Hastings Maluwa</a></p>
   </section>
 
   <!-- Footer -->
@@ -125,6 +133,22 @@
     <p>&copy; 2026 Hastings Maluwa</p>
   </footer>
 
+  <!-- Scroll Fade-in JS -->
+  <script>
+    const sections = document.querySelectorAll('.fade-in');
+    function revealSections() {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealSections);
+    window.addEventListener('load', revealSections);
+  </script>
 </body>
 </html>
+
 
